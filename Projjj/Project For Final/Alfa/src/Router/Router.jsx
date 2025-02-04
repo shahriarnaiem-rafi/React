@@ -6,6 +6,8 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Inspiration from "../pages/Inspiration";
 import Gallary from "../pages/Gallary";
+import Booking from "../pages/Booking";
+import Login from "../pages/aurth/Login";
 
 const Router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const Router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/booking",
+        element: <Booking />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },

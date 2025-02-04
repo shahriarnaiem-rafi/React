@@ -2,6 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling
+    });
+  };
+
   const navLink = (
     <>
       <li>
@@ -19,32 +26,40 @@ const Header = () => {
       <li>
         <NavLink to="/contact">Contact Us</NavLink>
       </li>
+      <li className="bg-green-600 ml-24 rounded-2xl hover:bg-sky-600 transition-colors">
+        <NavLink to="/login">Login <i className="fa-solid fa-right-to-bracket"></i></NavLink>
+      </li>
+      <li className="bg-red-600 ml-2 rounded-2xl">
+        <NavLink to="/Singup">Signup <i className="fa-solid fa-user-plus"></i></NavLink>
+      </li>
     </>
   );
 
   return (
     <>
-      {/* Hero Section with Background Image */}
-      <div
-        className="hero bg-cover bg-center min-h-screen"
-        style={{
-          backgroundImage: 'url("https://i.ibb.co.com/SzGFCHt/Banner.jpg")', // Replace with your image URL
-        }}
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-5 right-5 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
+        aria-label="Scroll to top"
       >
-        <div className="hero-content text-center text-white">
-          {" "}
-          {/* Changed to text-black */}
-          <div className="max-w-md">
-            <h1 className="text-5xl font-bold">Enjoy your stay at GrandPr0</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button className="btn btn-primary">Get Started</button>
-          </div>
-        </div>
-      </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M19 9l-7-7-7 7"
+          />
+        </svg>
+      </button>
+
+     
 
       {/* Navbar */}
       <div className="navbar bg-black fixed top-0 left-0 right-0 z-10 text-white opacity-90">
@@ -57,7 +72,13 @@ const Header = () => {
               {navLink}
             </ul>
           </div>
-          <a className=" bg-black-500 text-xl"><img style={{width:"150px", height:"80px"}} src="https://i.ibb.co.com/Y7fpTbrX/illustration-logo-grand-hotel-boutique-vintage-design-free-vector-removebg-preview-2.png" alt="" /></a>
+          <a className="bg-black-500 text-xl">
+            <img
+              style={{ width: "150px", height: "80px" }}
+              src="https://i.ibb.co.com/Y7fpTbrX/illustration-logo-grand-hotel-boutique-vintage-design-free-vector-removebg-preview-2.png"
+              alt="GrandPr0 Logo"
+            />
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
