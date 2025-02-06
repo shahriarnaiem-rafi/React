@@ -30,7 +30,7 @@ const Header = () => {
         <NavLink to="/login">Login <i className="fa-solid fa-right-to-bracket"></i></NavLink>
       </li>
       <li className="bg-red-600 ml-2 rounded-2xl">
-        <NavLink to="/Singup">Signup <i className="fa-solid fa-user-plus"></i></NavLink>
+        <NavLink to="/registration">Signup <i className="fa-solid fa-user-plus"></i></NavLink>
       </li>
     </>
   );

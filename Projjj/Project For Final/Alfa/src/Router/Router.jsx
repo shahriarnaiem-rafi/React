@@ -8,6 +8,8 @@ import Inspiration from "../pages/Inspiration";
 import Gallary from "../pages/Gallary";
 import Booking from "../pages/Booking";
 import Login from "../pages/aurth/Login";
+import Registration from "../pages/aurth/Registration";
+import Maindashboard from "../pages/AdminDashboard/Maindashboard";
 
 const Router = createBrowserRouter([
   {
@@ -42,8 +44,18 @@ const Router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
+      {
+        path: "/registration",
+        element: <Registration />,
+      },
+
     ],
   },
+  {
+    path:'/maindashboard',
+    element: <Maindashboard />,
+    
+  }
 ]);
 
 export default Router;

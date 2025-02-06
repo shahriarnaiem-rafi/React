@@ -5,8 +5,8 @@ import Footer from "../pages/Shared/Footer";
 const Root = () => {
     const location = useLocation();
     
-    // Hide header and footer only on the login page
-    const hideHeaderFooter = location.pathname === "/login";
+    // Hide header and footer only on the login and registration pages
+    const hideHeaderFooter = location.pathname === "/login" || location.pathname === "/registration";
 
     return (
         <>
